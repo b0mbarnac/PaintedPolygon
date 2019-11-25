@@ -9,9 +9,17 @@ public class Animator {
     private Graphics screenGraphics;
     private BufferedImage img;
 
-    public Animator(Graphics g){
+    public Animator(Graphics g) {
         screenGraphics = g;
-        img = new BufferedImage(BufferedImage.TYPE_3BYTE_BGR,750,1200);
+        img = new BufferedImage(1200, 750, BufferedImage.TYPE_3BYTE_BGR);
+        graphics = img.getGraphics();
+    }
+    public void drawFragmintation(){
+
     }
 
+
+    public void drowToScreen() {
+        screenGraphics.drawImage(img, 0, 0, null);
+    }
 }
